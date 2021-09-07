@@ -1,0 +1,397 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: #fac24a;
+}
+
+main {
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+h1{
+	text-align: center;
+	margin: 0;
+	padding: 20px;
+	font-size: 3rem;
+}
+h2{
+	text-align: center;
+	margin: 0;
+	padding: 20px;
+	font-size: 2rem;
+}
+h4{
+	text-align: center;
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+.contenedor-barra{
+	background-color:rgb(250, 113, 22);
+	margin: 0;
+	margin-top: 0;
+}
+.barra{
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	align-items: center;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+}
+
+.bg-white{
+	background-color:rgb(253, 165, 49);
+}
+
+.bg-white2{
+	background-color: antiquewhite;
+}
+
+.productos{
+	padding: 2rem;
+	margin-top: 2rem;
+}
+
+.contenedor-productos{
+	margin: 0 auto 0 auto;
+}
+
+.contenedor{
+	margin: 30px auto;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.sombra{ 
+	-webkit-box-shadow: 0px 0px 21px 4px rgba(240,240,240,1);
+	-moz-box-shadow: 0px 0px 21px 4px rgba(240,240,240,1);
+	box-shadow: 0px 0px 21px 4px rgba(240,240,240,1);
+}
+
+.label__form{
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 5px;
+	cursor: pointer;
+}
+
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 90%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 15px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 30px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	margin-top: 15px;
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: rgb(250, 113, 22);
+	color: #000;
+    font-weight: bold;
+    font-size: 16px;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgb(44, 44, 44);
+}
+
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+.formulario__imagen {
+    align-items: center;
+    margin: auto;
+    
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+/* ----- -----  Mediaquerys ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
+
+
+/*  estilos tabla */
+
+.productos{
+	padding:2rem;
+	margin-top: 3rem;
+}
+
+/*
+.contenedor-tabla{
+	overflow: scroll;
+}
+*/
+
+.total-productos{
+	margin: 1rem 0;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.total-productos span{
+	font-size: 2rem;
+	font-weight:900;
+}
+
+.listado-productos{
+	width: 100%;
+	margin-top: 1rem;
+	border-collapse: collapse;
+	
+}
+
+.listado-productos thead{
+	border-radius: 15px;
+	background-color: #fac24a;
+	text-transform: uppercase;
+}
+
+.listado-productos thead th{
+	padding: 1rem 0;
+}
+
+.listado-productos tbody td{
+	padding: 1rem;
+}
+
+.listado-productos tbody td:nth-child(6){
+	text-align: center;
+}
+
+.listado-productos button{
+	background-color: transparent!important;
+	border: none;
+}
+
+.btn {
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+
+.btn-editar{
+	color: rgb(97, 204, 34);
+	margin-right: 25px;;
+}
+
+.btn-borrar{
+	color: red;
+}
+
+.volver{
+	background-color: rgb(253, 165, 49);
+	font-weight: bold;
+	border-radius: 15px;
+	text-align: center;
+	color: #000;
+	font-size: 1rem;
+	margin-left: 50px;
+	text-transform: uppercase;
+	width: 150px;
+	height:45px;
+	line-height: 45px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.volver:hover {
+	box-shadow: 3px 0px 30px rgb(44, 44, 44);
+}
+
+
+/* Notificaciones */ 
+.notificacion{
+	background-color: rgb(253, 165, 49);
+	border-radius: 15px;;
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	padding: 1rem;
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+.visible{
+	opacity: 1;
+}
+
+.correcto{
+	background-color: green;
+}
+
+.error{
+	background-color: red;
+}
+
+
+/*  BUSCADOR  */ 
+.form_search {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	float: right;
+	padding: 10px;
+	border-radius: 25px;
+}
+.form_search .btn_search{
+	background: rgb(253, 165, 49);
+	color:#000;
+	border: 0;
+	cursor: pointer;
+	padding: 0 20px;
+	margin-left: 10px;
+	border-radius: 15px;
+	
+}
+
+.btn_search{
+	background: rgb(250, 113, 22);
+	color: #000;
+    font-weight: bold;
+    font-size: 16px;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.btn_search:hover{
+	box-shadow: 3px 0px 30px rgb(44, 44, 44);
+}
